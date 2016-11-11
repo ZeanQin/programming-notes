@@ -1,0 +1,3 @@
+./todo add todo.txt "an example line"
+./todo view todo.txt 
+./todo remove todo.txt 2
