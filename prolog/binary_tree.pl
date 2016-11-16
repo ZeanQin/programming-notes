@@ -1,3 +1,7 @@
+% This file contains an implementation of a binary tree in prolog. 
+% The 'binary_tree.hs' in the haskell folder contains an implementation of 
+% exactly the same binary tree in haskell. 
+
 % empty
 % node empty 5.5 empty
 
@@ -57,3 +61,8 @@ average_value2(node(L, Value, R), Average) :-
   sum_nodes(node(L, Value, R), Sum),
   count_nodes(node(L, Value, R), Count),
   Average is Sum / Count.
+
+same_shape(empty, empty).
+same_shape(node(L, _, R), node(L1, _, R1)) :- 
+  same_shape(L, L1),
+  same_shape(R, R1). 
